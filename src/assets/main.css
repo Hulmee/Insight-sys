@@ -106,7 +106,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--btn-bg);
+  background: var(--btn-lg);
   box-shadow: var(--shadow);
   cursor: pointer;
 }
@@ -119,13 +119,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--btn-bg);
+  background: var(--btn-lg);
   box-shadow: var(--shadow);
   cursor: pointer;
 }
 .btn-rnd:active,
 .btn-sqr:active {
   box-shadow: var(--shadow-inset);
+}
+.card > .btn-con > .btn-rec:active,
+.card > .btn-rec:active,
+.card > .btn-con > .btn-sqr:active,
+.card > .btn-sqr:active,
+.card > .btn-con > .btn-rnd:active,
+.card > .btn-rnd:active {
+  box-shadow: var(--shadow-inset-light);
 }
 .btn-rnd.muted,
 .btn-sqr.muted,
@@ -166,7 +174,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--btn-bg);
+  background: var(--btn-lg);
   box-shadow: var(--shadow);
   text-align: center;
   cursor: pointer;
@@ -209,4 +217,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.card-text > span {
+  width: 125px;
+}
+.btn-con {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card > .btn-con > .btn-rec,
+.card > .btn-rec,
+.card > .btn-con > .btn-sqr,
+.card > .btn-sqr,
+.card > .btn-con > .btn-rnd,
+.card > .btn-rnd {
+  background: var(--btn-bg-light);
+  box-shadow: none;
+  color: var(--dark);
 }

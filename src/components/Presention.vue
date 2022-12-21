@@ -5,7 +5,8 @@
       <div class="btn-con">
         Conected:
         <div
-          class="btn-rnd btn-rnd-sm"
+          id="HDMI"
+          class="btn-rnd btn-rnd-sm disabled"
           :class="{
             true: HDMI.conected,
             false: !HDMI.conected,
@@ -14,6 +15,7 @@
       <div class="btn-con">
         HDCP active:
         <div
+          id="HDCP"
           class="btn-rnd btn-rnd-sm"
           :class="{
             true: HDMI.HDCP,
@@ -36,6 +38,7 @@
       <div class="btn-con">
         Conected users:
         <div
+          id="AM"
           class="btn-rnd btn-rnd-sm"
           :class="{
             true: Airmedia.numUsers > 0,
@@ -70,26 +73,38 @@
     justify-content: space-around;
   }
 
-  .btn-con {
-    width: 75%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .card-text > span {
-    width: 125px;
-  }
   .btn-rnd {
     box-shadow: none;
     cursor: not-allowed;
   }
-  .true {
+  #HDMI.true {
     background: linear-gradient(145deg, #62be78, #53a065);
+    color: var(--light);
   }
-  .false {
+  #HDMI.false {
+    background: linear-gradient(145deg, #ff7878, #e66565);
+  }
+  #HDCP.true {
+    background: linear-gradient(145deg, #62be78, #53a065);
+    color: var(--light);
+  }
+  #HDCP.false {
+    background: linear-gradient(145deg, #ff7878, #e66565);
+  }
+  #AM.true {
+    background: linear-gradient(145deg, #62be78, #53a065);
+    color: var(--light);
+  }
+  #AM.false {
     background: linear-gradient(145deg, #ff7878, #e66565);
   }
   .btn-rnd:active {
+    box-shadow: none;
+  }
+  .btn-rnd:active,
+  .btn-sqr:active,
+  .card > .btn-con > .btn-rnd:active,
+  .card > .btn-rnd:active {
     box-shadow: none;
   }
 </style>
