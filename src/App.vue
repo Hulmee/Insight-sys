@@ -52,7 +52,9 @@
         <div
           id="vol"
           class="container">
-          <div class="btn-rnd btn-rnd-sm">
+          <div
+            @click="volFB = !volFB"
+            class="btn-rnd btn-rnd-sm">
             <font-awesome-icon icon="fa-solid fa-volume-high" />
           </div>
           <div
@@ -71,15 +73,26 @@
       <RouterView class="container" />
     </section>
   </div>
+  <Volumes
+    v-if="volFB"
+    @close="volFB = false" />
+  <Doorbell
+    v-if="bellFB"
+    @close="bellFB = false" />
 </template>
 
 <script setup>
   import { ref } from '@vue/reactivity'
   import { RouterLink, RouterView } from 'vue-router'
-  import Logo from '@/components/Logo.vue'
   import { onMounted } from '@vue/runtime-core'
 
+  import Logo from '@/components/Logo.vue'
+  import Volumes from './components/modals/Volumes.vue'
+  import Doorbell from './components/modals/Doorbell.vue'
+
   const darkMode = ref(false),
+    volFB = ref(false),
+    bellFB = ref(true),
     themechange = () => {
       darkMode.value = !darkMode.value
       localStorage.setItem('theme', JSON.stringify(darkMode.value))

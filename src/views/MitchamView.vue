@@ -20,7 +20,7 @@
       IPadress: '10.0.0.xxx',
       Code: '1234',
       Hostname: 'Mitcham-Room',
-      numUsers: 1,
+      numUsers: 0,
     })
   // })
 </script>

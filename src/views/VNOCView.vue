@@ -15,7 +15,7 @@
       <section
         id="LCD"
         class="card">
-        <h1 class="card-title">Screen {{ screenCon }} control</h1>
+        <h1 class="card-title">Screen {{ lcds[screenCon - 1].id }} control</h1>
         <div class="btn-con">
           <h3>Screen Power:</h3>
           <div
@@ -71,12 +71,12 @@
       {
         id: 1,
         on: false,
-        input: 4,
+        input: '4',
       },
       {
         id: 2,
         on: true,
-        input: 1,
+        input: '1',
       },
       {
         id: 3,
@@ -86,17 +86,17 @@
       {
         id: 4,
         on: false,
-        input: 3,
+        input: '3',
       },
       {
         id: 5,
         on: true,
-        input: 1,
+        input: '1',
       },
       {
         id: 6,
         on: true,
-        input: 1,
+        input: '1',
       },
     ]),
     mainPwwr = () => {
@@ -131,7 +131,6 @@
   }
   .screens {
     margin-left: 0.5em;
-    /* height: 75%; */
     width: 50%;
 
     display: grid;
@@ -188,8 +187,7 @@
 
   .select {
     width: 75%;
-    /* min-width: 15ch;
-  max-width: 30ch; */
+
     border: 3px solid var(--btn-br);
     border-radius: 0.75em;
     padding: 0.25em 0.5em;
