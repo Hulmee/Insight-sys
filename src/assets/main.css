@@ -48,6 +48,9 @@
 }
 :root {
   font-size: 16px;
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
 }
 *::before,
 *::after {
@@ -62,6 +65,7 @@ body {
   height: 100vh;
   width: 100%;
 }
+
 .container {
   display: flex;
   align-items: center;
