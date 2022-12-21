@@ -169,6 +169,7 @@ body {
   background: var(--btn-bg);
   box-shadow: var(--shadow);
   text-align: center;
+  cursor: pointer;
 }
 .btn-rec:active {
   box-shadow: var(--shadow-inset);
