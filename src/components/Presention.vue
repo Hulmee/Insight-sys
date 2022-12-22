@@ -48,16 +48,35 @@
         </div>
       </div>
       <div class="btn-con">
-        <div class="btn-rec btn-rec-sm">
+        <div
+          @click="reConf = true"
+          class="btn-rec btn-rec-sm">
           <small>Reboot </small>
         </div>
-        <div class="btn-rec btn-rec-sm"><small>Reset conections</small></div>
+        <div
+          @click="reset = true"
+          class="btn-rec btn-rec-sm">
+          <small>Reset conections</small>
+        </div>
       </div>
     </section>
   </div>
+  <RebootConf
+    @no="reConf = false"
+    v-if="reConf" />
+  <ResetCon
+    @no="reset = false"
+    v-if="reset" />
 </template>
 
 <script setup>
+  import { ref } from '@vue/reactivity'
+  import RebootConf from './modals/RebootConf.vue'
+  import ResetCon from './modals/ResetCon.vue'
+
+  const reConf = ref(false)
+  const reset = ref(false)
+
   const props = defineProps({
     HDMI: { type: Object, required: true },
     Airmedia: { type: Object, required: true },

@@ -261,3 +261,7 @@ body {
   top: 0;
   z-index: 99;
 }
+.modal > .card {
+  background-color: var(--light2);
+  color: var(--light);
+}

@@ -5,13 +5,14 @@
     <header class="">
       <!-- <RouterLink> -->
       <Logo
-        @click="bellFB = true"
+        @click="$router.push('/')"
         id="logo"
         :class="{ dark: darkMode, light: !darkMode }"
         class="" />
       <!-- </RouterLink> -->
       <h1>{{ $route.name }}</h1>
       <h2
+        @click="bellFB = true"
         id="time"
         class="">
         12:00 PM
@@ -93,7 +94,7 @@
 
   const darkMode = ref(false),
     volFB = ref(false),
-    bellFB = ref(true),
+    bellFB = ref(false),
     themechange = () => {
       darkMode.value = !darkMode.value
       localStorage.setItem('theme', JSON.stringify(darkMode.value))
@@ -127,6 +128,7 @@
     background-color: var(--BG);
     color: var(--CL);
   }
+
   header {
     height: 100px;
     width: 100%;
@@ -134,6 +136,7 @@
     align-items: center;
     justify-content: space-between;
   }
+
   #logo {
     width: 200px;
     padding: 1em;
@@ -194,5 +197,16 @@
   }
   #th-btn > svg {
     font-size: 1.5em;
+  }
+  @media (max-height: 720px) {
+    header {
+      display: none;
+    }
+    section {
+      height: 100%;
+    }
+    nav {
+      overflow: auto;
+    }
   }
 </style>

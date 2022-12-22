@@ -108,6 +108,12 @@
     lcdsPwr = e => {
       e.on = !e.on
       if (e.on) VWpower.value = true
+      // else {
+      //   for (let i = 0; i < lcds.value.length; i++) {
+      //     if (lcds.value[i].on) VWpower.value = true
+      //     else VWpower.value = false
+      //   }
+      // }
     }
 </script>
 

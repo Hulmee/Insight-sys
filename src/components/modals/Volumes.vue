@@ -92,7 +92,6 @@
   }
   .close {
     margin-left: auto;
-    /* margin-right: 1em */
     transform: translateY(-40px);
   }
   .card-subtitle {
@@ -116,13 +115,8 @@
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
-    /* height: 60px; */
-    /* background: #000; */
     cursor: pointer;
     border: 5px solid var(--dark);
     border-radius: 4px;
-  }
-  .card {
-    background-color: var(--light2);
   }
 </style>

@@ -22,19 +22,12 @@
 </template>
 
 <script setup>
-  // import { ref } from '@vue/reactivity'
-
   const emit = defineEmits(['close'])
 </script>
 
 <style scoped>
-  /* .btn-con {
-    width: 100%;
-    justify-content: space-around;
-  } */
   .card {
     width: 500px;
-    background-color: var(--light2);
   }
   .vol {
     display: flex;
