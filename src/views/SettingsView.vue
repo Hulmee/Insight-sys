@@ -27,50 +27,73 @@
         </span>
       </li>
     </ul>
+    <div
+      v-if="shh"
+      class="container">
+      <iframe
+        src="https://giphy.com/embed/MEMN2bdE4tB8Izd83r"
+        width="480"
+        height="271"
+        frameBorder="0"
+        class="giphy-embed"
+        allowFullScreen></iframe>
+      <iframe
+        src="https://giphy.com/embed/H7r5XcQccQvlXPwUOR"
+        width="480"
+        height="289"
+        frameBorder="0"
+        class="giphy-embed"
+        allowFullScreen></iframe>
+    </div>
+
+    <div
+      @click="shh = !shh"
+      class="btn-sqr btn-sqr-sm"></div>
   </main>
 </template>
 
 <script setup>
   import { ref } from '@vue/reactivity'
 
-  const devices = ref([
-    {
-      IPID: '11',
-      name: 'LCD 1 TCP/IP',
-      IPaddress: '10.100.0.2',
-      conected: true,
-    },
-    {
-      IPID: '12',
-      name: 'LCD 2 TCP/IP',
-      IPaddress: '10.100.0.3',
-      conected: true,
-    },
-    {
-      IPID: '13',
-      name: 'LCD 3 TCP/IP',
-      IPaddress: '10.100.0.4',
-      conected: false,
-    },
-    {
-      IPID: '14',
-      name: 'LCD 4 TCP/IP',
-      IPaddress: '10.100.0.5',
-      conected: true,
-    },
-    {
-      IPID: '15',
-      name: 'LCD 5 TCP/IP',
-      IPaddress: '10.100.0.6',
-      conected: true,
-    },
-    {
-      IPID: '16',
-      name: 'LCD 6 TCP/IP',
-      IPaddress: '10.100.0.7',
-      conected: true,
-    },
-  ])
+  const shh = ref(false),
+    devices = ref([
+      {
+        IPID: '11',
+        name: 'LCD 1 TCP/IP',
+        IPaddress: '10.100.0.2',
+        conected: true,
+      },
+      {
+        IPID: '12',
+        name: 'LCD 2 TCP/IP',
+        IPaddress: '10.100.0.3',
+        conected: true,
+      },
+      {
+        IPID: '13',
+        name: 'LCD 3 TCP/IP',
+        IPaddress: '10.100.0.4',
+        conected: false,
+      },
+      {
+        IPID: '14',
+        name: 'LCD 4 TCP/IP',
+        IPaddress: '10.100.0.5',
+        conected: true,
+      },
+      {
+        IPID: '15',
+        name: 'LCD 5 TCP/IP',
+        IPaddress: '10.100.0.6',
+        conected: true,
+      },
+      {
+        IPID: '16',
+        name: 'LCD 6 TCP/IP',
+        IPaddress: '10.100.0.7',
+        conected: true,
+      },
+    ])
 </script>
 
 <style scoped>
@@ -131,5 +154,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+  .btn-sqr {
+    border: none;
   }
 </style>
