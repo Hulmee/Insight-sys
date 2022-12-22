@@ -5,7 +5,7 @@
     <header class="">
       <!-- <RouterLink> -->
       <Logo
-        @click="$router.push('/')"
+        @click="$router.push('/settings')"
         id="logo"
         :class="{ dark: darkMode, light: !darkMode }"
         class="" />

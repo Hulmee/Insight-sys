@@ -145,23 +145,26 @@ body {
 .btn-sqr.muted,
 .btn-rec.muted {
   background: var(--fail);
-  /* box-shadow: inset 5px 5px 10px #b34e4e, inset -5px -5px 10px #ff9292; */
   box-shadow: var(--shadow-inset);
 }
 .btn-rnd.linked,
 .btn-sqr.linked,
 .btn-rec.linked {
   background: var(--info);
-  /* box-shadow: inset 5px 5px 10px #4378b0, inset -5px -5px 10px #5ba2ee; */
   box-shadow: var(--shadow-inset);
 }
 .btn-rnd.active,
 .btn-sqr.active,
 .btn-rec.active {
   background: var(--gold);
-  /* box-shadow: inset 5px 5px 10px #a4863c, inset -5px -5px 10px #deb652; */
   box-shadow: var(--shadow-inset);
 }
+/* .btn-rnd.success,
+.btn-sqr.success,
+.btn-rec.success {
+  background: var(--success);
+  box-shadow: var(--shadow-inset);
+} */
 .btn-rnd-sm {
   height: 3em;
   width: 3em;
