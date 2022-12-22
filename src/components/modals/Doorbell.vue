@@ -34,6 +34,7 @@
   } */
   .card {
     width: 500px;
+    background-color: var(--light2);
   }
   .vol {
     display: flex;

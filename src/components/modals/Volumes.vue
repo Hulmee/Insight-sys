@@ -101,6 +101,7 @@
 
   .slider {
     -webkit-appearance: none;
+    appearance: none;
     /* width: 50%; */
     height: 20px;
     background: rgba(255, 255, 255, 0.4);
@@ -120,5 +121,8 @@
     cursor: pointer;
     border: 5px solid var(--dark);
     border-radius: 4px;
+  }
+  .card {
+    background-color: var(--light2);
   }
 </style>
