@@ -45,6 +45,8 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+
+  touch-action: manipulation;
 }
 :root {
   font-size: 16px;
@@ -62,7 +64,7 @@ html {
 }
 body {
   overflow: none;
-  height: 100vh;
+  height: 100svh;
   width: 100%;
 }
 
