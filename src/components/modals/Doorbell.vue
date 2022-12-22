@@ -4,22 +4,24 @@
       class="modal"
       @click.self="$emit('close')">
       <div class="card">
-        <div class="btn-con">
-          <h3 class="card-subtitle">Doorbell</h3>
-          <font-awesome-icon
-            @click="$emit('close')"
-            class="close"
-            icon="fa-solid fa-xmark" />
-        </div>
+        <h3 class="card-subtitle">Doorbell</h3>
         <iframe
           src="https://www.youtube-nocookie.com/embed/6My4Hdj5oW8?controls=0"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
-        <div class="btn-con">
+        <!-- <div class="btn-con">
           <div class="btn-rnd btn-rnd-sm"></div>
           <div class="btn-rnd btn-rnd-sm"></div>
+        </div> -->
+        <div
+          @click="$emit('close')"
+          class="btn-rec btn-rec-sm">
+          <h2>Close</h2>
+          <!-- <font-awesome-icon
+            class=""
+            icon="fa-solid fa-xmark" /> -->
         </div>
       </div>
     </section>
@@ -42,7 +44,7 @@
   }
   .card {
     width: 500px;
-    aspect-ratio: 1/1.25;
+    /* aspect-ratio: 1/1.25; */
   }
   .vol {
     display: flex;
@@ -51,18 +53,10 @@
     flex-direction: column;
   }
   h3,
-  label,
-  .close {
+  label {
     color: var(--light);
   }
-  .close {
-    margin-left: auto;
-    /* margin-right: 1em */
-    transform: translateY(-40px);
-  }
-  .card-subtitle {
-    margin-left: auto;
-  }
+
   iframe {
     width: 100%;
     aspect-ratio: 16/9;

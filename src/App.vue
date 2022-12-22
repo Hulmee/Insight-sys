@@ -5,6 +5,7 @@
     <header class="">
       <!-- <RouterLink> -->
       <Logo
+        @click="bellFB = true"
         id="logo"
         :class="{ dark: darkMode, light: !darkMode }"
         class="" />
