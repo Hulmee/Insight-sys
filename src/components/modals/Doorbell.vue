@@ -11,17 +11,10 @@
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
-        <!-- <div class="btn-con">
-          <div class="btn-rnd btn-rnd-sm"></div>
-          <div class="btn-rnd btn-rnd-sm"></div>
-        </div> -->
         <div
           @click="$emit('close')"
           class="btn-rec btn-rec-sm">
           <h2>Close</h2>
-          <!-- <font-awesome-icon
-            class=""
-            icon="fa-solid fa-xmark" /> -->
         </div>
       </div>
     </section>
@@ -29,22 +22,18 @@
 </template>
 
 <script setup>
-  import { ref } from '@vue/reactivity'
+  // import { ref } from '@vue/reactivity'
 
   const emit = defineEmits(['close'])
 </script>
 
 <style scoped>
-  /* progress {
-      width: 50%;
-    } */
-  .btn-con {
+  /* .btn-con {
     width: 100%;
     justify-content: space-around;
-  }
+  } */
   .card {
     width: 500px;
-    /* aspect-ratio: 1/1.25; */
   }
   .vol {
     display: flex;

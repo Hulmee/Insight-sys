@@ -22,9 +22,16 @@
           </div>
           <div class="vol">
             <label>{{ vol.name }}</label>
-            <progress
+            <!-- <progress
               max="100"
-              :value="vol.value"></progress>
+              :value="vol.value"></progress> -->
+            <input
+              type="range"
+              min="0"
+              max="100"
+              v-model.number="vol.value"
+              class="slider"
+              id="myRange" />
           </div>
           <div
             @click="vol.value++"
@@ -57,7 +64,10 @@
         name: 'zone 3',
         value: 50,
       },
-    ])
+    ]),
+    change = e => {
+      console.log(e.target.valueAsNumber)
+    }
 </script>
 
 <style scoped>
@@ -69,6 +79,7 @@
     justify-content: center;
   }
   .vol {
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,5 +97,28 @@
   }
   .card-subtitle {
     margin-left: auto;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    /* width: 50%; */
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    outline: none;
+    border: 5px solid var(--light);
+    border-radius: 8px;
+    margin-top: 0.5em;
+  }
+
+  /* for chrome/safari */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    /* height: 60px; */
+    /* background: #000; */
+    cursor: pointer;
+    border: 5px solid var(--dark);
+    border-radius: 4px;
   }
 </style>
