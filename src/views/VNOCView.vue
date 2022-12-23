@@ -64,56 +64,20 @@
 
 <script setup>
   import { ref } from '@vue/reactivity'
+  import { useVWallStore } from '@/stores/VWallStore'
 
   const VWpower = ref(true),
     screenCon = ref(1),
-    lcds = ref([
-      {
-        id: 1,
-        on: false,
-        input: '4',
-      },
-      {
-        id: 2,
-        on: true,
-        input: '1',
-      },
-      {
-        id: 3,
-        on: true,
-        input: 1,
-      },
-      {
-        id: 4,
-        on: false,
-        input: '3',
-      },
-      {
-        id: 5,
-        on: true,
-        input: '1',
-      },
-      {
-        id: 6,
-        on: true,
-        input: '1',
-      },
-    ]),
+    { lcds } = useVWallStore(),
     mainPwwr = () => {
       VWpower.value = !VWpower.value
-      lcds.value.forEach(e => {
+      lcds.forEach(e => {
         e.on = VWpower.value
       })
     },
     lcdsPwr = e => {
       e.on = !e.on
       if (e.on) VWpower.value = true
-      // else {
-      //   for (let i = 0; i < lcds.value.length; i++) {
-      //     if (lcds.value[i].on) VWpower.value = true
-      //     else VWpower.value = false
-      //   }
-      // }
     }
 </script>
 

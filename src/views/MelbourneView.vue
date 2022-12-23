@@ -27,18 +27,13 @@
   import Presention from '../components/Presention.vue'
   import Camera from '../components/Camera.vue'
 
-  const HDMI = ref({
-      conected: false,
-      HDCP: false,
-      resolution: '1920 x 1080',
-    }),
-    Airmedia = ref({
-      IPadress: '10.0.0.xxx',
-      Code: '0000',
-      Hostname: 'Melbourne-Room',
-      numUsers: 0,
-    }),
-    camera = ref(true)
+  import { usePresStore } from '@/stores/PresStore'
+
+  const {
+    Melbourne: { HDMI, Airmedia },
+  } = usePresStore()
+
+  const camera = ref(true)
 </script>
 
 <style scoped>

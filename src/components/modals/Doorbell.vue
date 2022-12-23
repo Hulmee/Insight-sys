@@ -5,12 +5,20 @@
       @click.self="$emit('close')">
       <div class="card">
         <h3 class="card-subtitle">Doorbell</h3>
+
         <iframe
-          src="https://www.youtube-nocookie.com/embed/6My4Hdj5oW8?controls=0"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+          src="https://giphy.com/embed/3o7TKAXB6Kav3UdFVm"
+          width="480"
+          height="270"
+          frameBorder="0"
+          class="giphy-embed"
+          allowFullScreen></iframe>
+        <!-- <p>
+          <a
+            href="https://giphy.com/gifs/south-park-the-book-of-mormon-musical-3o7TKAXB6Kav3UdFVm"
+            >via GIPHY</a
+          >
+        </p> -->
         <div
           @click="$emit('close')"
           class="btn-rec btn-rec-sm">

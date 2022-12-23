@@ -9,20 +9,11 @@
 <script setup>
   import { ref } from '@vue/reactivity'
   import Presention from '../components/Presention.vue'
+  import { usePresStore } from '@/stores/PresStore'
 
-  // const details = ref({
-  const HDMI = ref({
-      conected: false,
-      HDCP: false,
-      resolution: '1280 x 720',
-    }),
-    Airmedia = ref({
-      IPadress: '10.0.0.xxx',
-      Code: '1234',
-      Hostname: 'Mitcham-Room',
-      numUsers: 0,
-    })
-  // })
+  const {
+    Mitcham: { HDMI, Airmedia },
+  } = usePresStore()
 </script>
 
 <style scoped>
