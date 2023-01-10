@@ -4,7 +4,7 @@ import { computed, ref } from 'vue'
 export const usePresStore = defineStore('Pres', () => {
   const Eltham = ref({
       HDMI: {
-        conected: true,
+        conected: false,
         HDCP: false,
         resolution: '1920 x 1080',
       },
@@ -17,7 +17,7 @@ export const usePresStore = defineStore('Pres', () => {
     }),
     Mitcham = ref({
       HDMI: {
-        conected: false,
+        conected: true,
         HDCP: false,
         resolution: '1280 x 720',
       },
