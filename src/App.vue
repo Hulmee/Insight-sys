@@ -205,8 +205,8 @@
     section {
       height: 100%;
     }
-    nav {
+    /* nav {
       overflow: auto;
-    }
+    } */
   }
 </style>
