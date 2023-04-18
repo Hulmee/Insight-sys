@@ -10,6 +10,9 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      name: 'Mystro',
+      theme_color: '#ff7070',
+
       registerType: 'autoUpdate',
       devOptions: {
         enabled: true,
