@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <h1>pick a Room from the menue</h1>
+    <h1>pick a Room from the menu</h1>
   </main>
 </template>
 
