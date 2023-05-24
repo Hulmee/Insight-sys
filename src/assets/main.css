@@ -2,14 +2,6 @@
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
   font-family: 'JetBrains Mono', monospace;
 
-  /* Insight Font (not working ) */
-  /* @font-face {
-    src: url('./font/Soleil.otf') format('opentype');
-  }
-  font-family: soleil, sans-serif;
-  font-style: normal; */
-  /* font-weight: 300; */
-
   /* color variables  */
   --dark-trans: rgba(0, 0, 0, 0.7);
   --dark: #3c4040;
